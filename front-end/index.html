@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title>Wizard-v10</title>
+	<title>ReliefMe | App</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<!-- Main Style Css -->
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
 </head>
+
 <body>
-	<div class="page-content" >
+	<div class="page-content">
 		<div class="wizard-v10-content">
 			<div class="wizard-form">
 				<div class="wizard-header">
 					<h3>Check Now</h3>
 				</div>
-		        <form class="form-register" id ="myForm" action="#" method="post">
-		        	<div id="form-total">
-		        		<!-- SECTION 1 -->
-			            <h2>1</h2>
-			            <section>
-			                <div class="inner">
+				<form class="form-register" id="myForm" action="#" method="post">
+					<div id="form-total">
+						<!-- SECTION 1 -->
+						<h2>1</h2>
+						<section>
+							<div class="inner">
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="first-name">Has the patient given consent for participating in this
-					research (link) ?</label>
+											research (link) ?</label>
 										<input type="radio" class="form-control" id="first-name" name="first-name">
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="last-name">Enter Your Age</label>
-										<input type="text" class="form-control" id="age" name="age">
+										<input type="text" class="form-control" id="age" name="age" required>
 									</div>
 								</div>
 							</div>
 						</section>
-						
+
 
 
 						<!-- SECTION 2 -->
-			            <h2>2</h2>
-			            <section>
-			                <div class="inner">
+						<h2>2</h2>
+						<section>
+							<div class="inner">
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="subject">Gender</label>
@@ -61,114 +64,130 @@
 										</span>
 									</div>
 								</div>
+							</div>
+
+
+							<div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="subject">Is the patient a smoker?</label>
+										<select name="smoker" id="subject" class="form-control">
+											<option value="" disabled selected>Is the patient a smoker?</option>
+											<option value="Yes">Yes</option>
+											<option value="No">No</option>
+											</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
+									<script
+										src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+									</script>
+								</div>
+							</div>
 
-
-									<div class="inner">
-										<div class="form-row">
-											<div class="form-holder form-holder-2">
-												<label for="subject">Is the patient a smoker?</label>
-												<select name="smoker" id="subject" class="form-control">
-													<option value="" disabled selected>Is the patient a smoker?</option>
-													<option value="Yes">Yes</option>
-													<option value="No">No</option>
-													</option>
-												</select>
-												<span class="select-btn">
-													<i class="zmdi zmdi-chevron-down"></i>
-												</span>
-											</div><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"></script>
-										</div>
-											</div>
-								
 
 						</section>
-						
-
-<!-- SECTION 3 -->
-<h2>3</h2>
-<section>
-	<div class="form-row"><br><br>
-		<div class="form-holder form-holder-2">
-			<label><span class="is-required">*</span>Patient Reported Symptoms </span><br><br>
-
-				<input type="checkbox" id="roundtrip1" name="reported_symptoms" value="Fever, chills, or sweating">
-				<label for="roundtrip1">Fever, chills, or sweating</label><br>
-				
-
-				<input type="checkbox" id="roundtrip2" name="reported_symptoms" value="Shortness of breath">
-				<label for="roundtrip2">Shortness of breath</label><br>
-				
-
-				<input type="checkbox" id="roundtrip3" name="reported_symptoms" value="New or worsening cough">
-				<label for="roundtrip3"> New or worsening cough</label><br>
-				
-
-				<input type="checkbox" id="roundtrip4" name="reported_symptoms" value="Sore throat">
-				<label for="roundtrip4">Sore throat</label><br>
-				
-
-				<input type="checkbox" id="roundtrip9" name="reported_symptoms" value="Body aches">
-				<label for="roundtrip9">Body aches</label><br>
-				
-
-				<input type="checkbox" id="roundtrip7" name="reported_symptoms" value="Loss of smell">
-				<label for="roundtrip7">Loss of smell</label><br>
-				
-
-				<input type="checkbox" id="roundtrip8" name="reported_symptoms" value="None">
-				<label for="roundtrip8">None</label>
-				<br />
-</div>
-	</div>
-</section>
-
-<!-- SECTION 4 -->
-<h2>4</h2>
-<section>
-	<div class="form-row"><br><br>
-		<div class="form-holder form-holder-2">
-			<label><span class="is-required">*</span>Medical History</label><br>
-
-						<input type="checkbox" id="roundtrip01" name="medical_history" value="Asthma or chronic lung disease">
-						<label for="roundtrip01">Asthma or chronic lung disease</label><br>
-						
-
-						<input type="checkbox" id="roundtrip02" name="medical_history" value="Pregnancy">
-						<label for="roundtrip02">Pregnancy</label><br>
-
-						
-						<input type="checkbox" id="roundtrip03" name="medical_history" value="Diabetes with complications">
-						<label for="roundtrip03">Diabetes with complications</label><br>
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"></script>
-
-						<input type="checkbox" id="roundtrip04" name="medical_history"
-							value="Disease or conditions that make it harder to cough">
-						<label for="roundtrip04">Disease or conditions that make it harder to cough</label><br>
-						
-
-						<input type="checkbox" id="roundtrip09" name="medical_history" value="Congestive heart failure">
-						<label for="roundtrip09">Congestive heart failure</label><br>
-
-						<input type="checkbox" id="roundtrip07" name="medical_history" value="Extreme obesity">
-						<label for="roundtrip07">Extreme obesity</label><br>
-						
-
-						<input type="checkbox" id="roundtrip08" name="medical_history" value="None">
-						<label for="roundtrip08">None</label>
-</div>
-			</div>
 
 
-</section>
+						<!-- SECTION 3 -->
+						<h2>3</h2>
+						<section>
+							<div class="form-row"><br><br>
+								<div class="form-holder form-holder-2">
+									<label><span class="is-required">*</span>Patient Reported Symptoms </span><br><br>
+
+										<input type="checkbox" id="roundtrip1" name="reported_symptoms"
+											value="Fever, chills, or sweating">
+										<label for="roundtrip1">Fever, chills, or sweating</label><br>
+
+
+										<input type="checkbox" id="roundtrip2" name="reported_symptoms"
+											value="Shortness of breath">
+										<label for="roundtrip2">Shortness of breath</label><br>
+
+
+										<input type="checkbox" id="roundtrip3" name="reported_symptoms"
+											value="New or worsening cough">
+										<label for="roundtrip3"> New or worsening cough</label><br>
+
+
+										<input type="checkbox" id="roundtrip4" name="reported_symptoms"
+											value="Sore throat">
+										<label for="roundtrip4">Sore throat</label><br>
+
+
+										<input type="checkbox" id="roundtrip9" name="reported_symptoms"
+											value="Body aches">
+										<label for="roundtrip9">Body aches</label><br>
+
+
+										<input type="checkbox" id="roundtrip7" name="reported_symptoms"
+											value="Loss of smell">
+										<label for="roundtrip7">Loss of smell</label><br>
+
+
+										<input type="checkbox" id="roundtrip8" name="reported_symptoms" value="None">
+										<label for="roundtrip8">None</label>
+										<br />
+								</div>
+							</div>
+						</section>
+
+						<!-- SECTION 4 -->
+						<h2>4</h2>
+						<section>
+							<div class="form-row"><br><br>
+								<div class="form-holder form-holder-2">
+									<label><span class="is-required">*</span>Medical History</label><br>
+
+									<input type="checkbox" id="roundtrip01" name="medical_history"
+										value="Asthma or chronic lung disease">
+									<label for="roundtrip01">Asthma or chronic lung disease</label><br>
+
+
+									<input type="checkbox" id="roundtrip02" name="medical_history" value="Pregnancy">
+									<label for="roundtrip02">Pregnancy</label><br>
+
+
+									<input type="checkbox" id="roundtrip03" name="medical_history"
+										value="Diabetes with complications">
+									<label for="roundtrip03">Diabetes with complications</label><br>
+									<script
+										src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+									</script>
+
+									<input type="checkbox" id="roundtrip04" name="medical_history"
+										value="Disease or conditions that make it harder to cough">
+									<label for="roundtrip04">Disease or conditions that make it harder to
+										cough</label><br>
+
+
+									<input type="checkbox" id="roundtrip09" name="medical_history"
+										value="Congestive heart failure">
+									<label for="roundtrip09">Congestive heart failure</label><br>
+
+									<input type="checkbox" id="roundtrip07" name="medical_history"
+										value="Extreme obesity">
+									<label for="roundtrip07">Extreme obesity</label><br>
+
+
+									<input type="checkbox" id="roundtrip08" name="medical_history" value="None">
+									<label for="roundtrip08">None</label>
+								</div>
+							</div>
+
+
+						</section>
 
 
 
 
 
 
-		        	</div>
-		        </form>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -177,7 +196,7 @@
 	<script src="js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
 	<script src="js/submit.js"></script>
-	
+
 	<!-- <script>
 		function submit_data() {
 			const msg = "Your Message has  been received , we will contact soon!";
@@ -191,4 +210,5 @@
 
 
 </body>
+
 </html>
